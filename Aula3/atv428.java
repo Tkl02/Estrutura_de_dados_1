@@ -1,3 +1,11 @@
+/*A matriz dados contém na 1 coluna a matrícula do aluno; na 2, o sexo (0 para
+feminino e 1 para masculino); na 3 o código do curso, e na 4 o CR.
+Faça um algoritmo que armazene esses dados sabendo-se que:
+E o código do curso e uma parte da matrícula: aascccnnn (aa ano, s
+semestre, ccc código do curso e nnn matrícula no curso)
+Um grupo empresarial resolveu premiar a aluna com CR mais alto de um curso
+cujo código deverá ser digitado. Suponha 10 alunos e que o CR é um n2inteiro.*/
+
 package Aula3;
 
 import java.util.Scanner;

@@ -1,3 +1,7 @@
+/*Criar um algoritmo que leia os elementos de matriz inteira 
+10 x 10 e escreva somente os elementos acima da diagonal principal*/
+
+
 package Aula3;
 
 import java.util.Scanner;

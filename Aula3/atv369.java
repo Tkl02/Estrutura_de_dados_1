@@ -1,3 +1,10 @@
+/*Criar um algoritmo para gerenciar um sistema de reservas de mesas em uma casa
+de espetáculo.
+A casa possui 30 mesas de 5 lugares cada. O algoritmo deverá permitir que o
+usuário escolha código de uma mesa (100 a 129) e forneça a quantidade de lugares desejados. O algoritmo deverá informarse foi possível realizara reserva e atualizar a reserva. Se não for possível, o algoritmo deverá emitir uma mensagem. O
+algoritmo deve terminar quando o usuário digitar o código O (zero) para uma
+mesa ou quando todos os 150 lugares estiverem ocupados. */
+
 package Aula3;
 
 import java.util.Scanner;

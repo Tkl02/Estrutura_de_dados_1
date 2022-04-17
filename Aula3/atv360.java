@@ -1,3 +1,7 @@
+/*Criar um algoritmo que imprima o horóscopo de várias pessoas, a partir de sua
+data de nascimento (ddmm). O fim é determinado quando se digita 9999 para
+data; considere que a data foi digitada corretamente. */
+
 package Aula3;
 
 

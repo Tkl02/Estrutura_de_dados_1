@@ -1,3 +1,7 @@
+/*Criar um algoritmo que armazene dados inteiros em uma matriz de ordem cinco e
+imprima:. toda a matriz e uma outra matriz formada pelos números que se encontram
+ em posições cuja linha mais coluna formam um numero par */
+
 package Aula3;
 
 import java.util.Scanner;
@@ -7,7 +11,6 @@ public class atv412 {
         int[][] n = new int[5][5];
         int  l = 0;
         int c = 0;
-        int  t = 0;
         do {
             do {
                System.out.println("Digite elemento: " + (l + 1) + " - " + (c + 1) + " : " );

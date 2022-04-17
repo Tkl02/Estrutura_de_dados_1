@@ -1,3 +1,7 @@
+/*Armazenar nomes e notas das PR 1 e PR2 de 15 alunos. Calcular e armazenar
+ a média arredondada. Armazenar também a situação do aluno: AP ou RP. Imprimir
+uma listagem contendo nome notas media e situação de cada aluno tabulando*/
+
 package Aula3;
 
 import java.util.Scanner;

@@ -1,3 +1,10 @@
+/*Criar um algoritmo que leia o preço de compra e o preço de venda de 100 mercadorias 
+O algoritmo devera imprimir quantas mercadorias proporcionam
+m lucro < 10 %
+10 % <= lucro <= 20 %
+m lucro > 20 % */
+
+
 package Aula3;
 
 import java.util.Scanner;
