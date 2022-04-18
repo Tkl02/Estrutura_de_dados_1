@@ -14,8 +14,8 @@ public class atv356{
 
     try (Scanner sc = new Scanner(System.in)) {
         int[] media = new int[15];
-        double[] pr1 = new double[15];
-        double[] pr2 = new double[15];
+        double[] nota1 = new double[15];
+        double[] nota2 = new double[15];
         
         String[] nomes = new String[15];
         String[] sit = new String[15];
@@ -36,10 +36,10 @@ public class atv356{
             c++;
         } while (c <= t);
          System.out.println("Digite a primeira nota: ");
-                pr1[l] =  sc.nextDouble();
+                nota1[l] =  sc.nextDouble();
          System.out.println("Digite a segunda nota: ");
-                pr2[l] = sc.nextDouble();
-         media[l] = (int)((pr1[l] + pr2[l])/2);
+                nota2[l] = sc.nextDouble();
+         media[l] = (int)((nota1[l] + nota2[l])/2);
         
         System.out.println(media[l]);
         if (media[l] > 5) {
@@ -53,7 +53,7 @@ public class atv356{
 ///////////////////////////////////////////////////////////////////////////resultado final
          System.out.println("RELAÇÃO FINAL");
             for ( l = 0; l <= 14; l++) {
-                System.out.println((l + 1) + " - " + nomes[l] + "\t" + pr1[l] + "\t" + pr2[l] + "\t" + media[l] + "\t" + sit[l]);
+                System.out.println((l + 1) + " - " + nomes[l] + "\t" + nota1[l] + "\t" + nota2[l] + "\t" + media[l] + "\t" + sit[l]);
             }
     }
 
