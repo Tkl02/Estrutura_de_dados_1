@@ -27,8 +27,10 @@ public class atv400 {
         Scanner sc = new Scanner(System.in);
      
         int  i = 0;
-        int  k, chave, quarto, op ;
-        String resp = "";String resp1 = ""; String respo = "";String nomep= "";
+        int  chave, quarto, op ;
+        String resp = "";
+        String resp1 = ""; 
+        String nomep= "";
         float valor, total;
         chave = 0;
         op = 1;
@@ -99,15 +101,14 @@ public class atv400 {
                                System.out.println("\nData de entrada: " + din[i]);
                                System.out.println("\nData de saida: " + dout[i]);
                                System.out.println("\nNumero de dias: " + nd[i]);
-                               System.out.println("\nPressione enter para continuar:");
-                               respo = sc.next();}
+                               System.out.println("\nPressione enter para continuar:");}
                                
                            i++;
                     }
                    }
                }
            }
-           else if (true){
+           if (true){
                if (op == 3) {
                    if(chave == 0){
                        System.out.println("Escolha a opção 1.");
@@ -130,7 +131,7 @@ public class atv400 {
    
            }
          
-           else if (true) {
+           if (true) {
             if (op == 4) {
                 if (chave == 0) {
                     System.out.println("Escolha a opção 1.");
@@ -176,7 +177,6 @@ public class atv400 {
                        System.out.println("Quantidade de leitos: " + leitos[i]);
                        System.out.println("Preco de quarto: " + precos[i]);
                        System.out.println("Pressione enter pra continuar: ");
-                       respo = sc.next();
                    }
                    i++;
                }
@@ -208,7 +208,7 @@ public class atv400 {
            nd[quarto - 1] = sc.nextInt();
        }
    
-       }else if (true) {
+       } if (true) {
            if (op == 5 ) {
            if (chave == 0) {
                System.out.println("Escolha  a opção 1.");
@@ -225,7 +225,7 @@ public class atv400 {
               despesas[quarto-1] = despesas[quarto-1] + valor;
            }        
         }
-       }else if (true) {
+       } if (true) {
            if (op == 6) {
                if (chave==0) {
                    System.out.println("Escolha a opção 1.");
@@ -246,7 +246,7 @@ public class atv400 {
                 nome[quarto - 1] = "";  
                }
            }
-       }else{
+       }{
            if (op == 7) {
                System.out.println("SAINDO");
            }else{
