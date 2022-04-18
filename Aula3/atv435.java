@@ -4,5 +4,7 @@ apresente uma determinada coluna da matriz, solicitada via teclado. */
 package Aula3;
 
 public class atv435 {
-    
+    public static void main(String[] args) {
+        int n
+    }
 }
