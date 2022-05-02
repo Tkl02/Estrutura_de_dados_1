@@ -15,8 +15,8 @@ public class atv358 {
             int menor20 = 0;
             int maior20 = 0;
             float lucro;
-            float[] compra = new float[100];
-            float[] venda = new float [100];
+            float[] compra = new float[5];
+            float[] venda = new float [5];
             int a = 0;
 
             do {
@@ -25,7 +25,7 @@ public class atv358 {
              System.out.println("Preço venda: ");
                 venda[a] = sc.nextFloat();  
              a++;
-            } while (a < 100);
+            } while (a < 4);
             a = 0;
             do {
             lucro = venda[a] - compra[a];  /////calculo
@@ -37,7 +37,7 @@ public class atv358 {
                   maior20++;
                 }
             a++;
-            } while (a < 100);                       //resultados
+            } while (a < 4);                       //resultados
             System.out.println("total de mercadorias com lucro < 10%:" + menor10);
             System.out.println("total de mercadorias com 10% <= lucro <= 20%: " + menor20);
             System.out.println("total de mercadorias com lucro > 20%: "+ maior20);

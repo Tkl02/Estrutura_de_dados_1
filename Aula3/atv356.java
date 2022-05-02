@@ -18,7 +18,7 @@ public class atv356{
         double[] nota2 = new double[15];
         
         String[] nomes = new String[15];
-        String[] sit = new String[15];
+        String[] result = new String[15];
 /////////////////////////////////////////////////////////////////////////entrada dos alunos
         do {
         System.out.print("\n Digite " + (l+1)+ " nomes:");  
@@ -43,9 +43,9 @@ public class atv356{
         
         System.out.println(media[l]);
         if (media[l] > 5) {
-            sit[l] = "AP";
+            result[l] = "AP";
         } else {
-            sit[l] = "RP"; 
+            result[l] = "RP"; 
         }
              
         l++;
@@ -53,7 +53,7 @@ public class atv356{
 ///////////////////////////////////////////////////////////////////////////resultado final
          System.out.println("RELAÇÃO FINAL");
             for ( l = 0; l <= 14; l++) {
-                System.out.println((l + 1) + " - " + nomes[l] + "\t" + nota1[l] + "\t" + nota2[l] + "\t" + media[l] + "\t" + sit[l]);
+                System.out.println((l + 1) + " - " + nomes[l] + "\t" + nota1[l] + "\t" + nota2[l] + "\t" + media[l] + "\t" + result[l]);
             }
     }
 
