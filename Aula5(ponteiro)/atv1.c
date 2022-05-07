@@ -34,4 +34,20 @@ printf("\n INDO PARA VALOR REAL \n");
 printf("\nvalor de z=%f", z);
 printf("\nEndereco apontado por ptrx: %x",ptrr);
 printf("\nEndereco de memoria da variavel ptrx %x\n",&ptrr);
+printf("\n INDO PARA CHAR \n");
+
+ //////////////////// ponteiro do CHAR //////////////////////////////////////////////////////////////
+  y = 'o';
+  printf("\nvalor de y= %c\n", y);
+  printf("Endereco de y: %c\n", &y);
+
+  ptrc = &y;
+  pptrc = &ptrc;
+
+  *ptrc = *ptrc , 'i';
+
+printf("\nvalor de y=%c", y);
+printf("\nEndereco apontado por ptrx: %x",ptrc);
+printf("\nEndereco de memoria da variavel ptrx %x\n",&ptrc);
+
 }
