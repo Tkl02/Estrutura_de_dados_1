@@ -9,13 +9,17 @@ int main(void)
         scanf("%d", &num[i]);
     }
 
-    if (num[i]%2 ==0)
+    for (i = 0; i < 5; i++)
     {
-        printf("o endereço do numero %d e %p:",num[i]);
+           if (num[i]%2 ==0)
+    {
+        printf("\no endereco do numero %d e %p: \n",num[i],num[i]);
     }
     else
-    printf("numero impar!!");
+    printf("\nnumero %d e impar!!\n",num[i]);
 
+    }
+    
     
     return 0;
 }
