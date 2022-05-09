@@ -6,7 +6,7 @@ int main(void)
     int i,n =1;
     for (i = 0; i < 10; i++)
     {
-        printf("endereço %i = %p\n",n++, numeros[i]);    
+        printf("endereco %i = %p\n",n++, numeros[i]);    
     }
 
     return 0;
