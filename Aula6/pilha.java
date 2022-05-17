@@ -20,7 +20,7 @@ public class pilha {
     String v_auxiliar;
     
     v_auxiliar = "";
-    n = s.length(); 
+    n = s.length();
     for(i=(n-1); i>=0; i--) {
       v_auxiliar = v_auxiliar + s.charAt(i);
     }
