@@ -1,8 +1,9 @@
-package Aula4;
+package Aula7;
 
 import javax.swing.JOptionPane;
 
-public class exemploPilha {
+public class pilha{
+public static void main(String[] args) {
     int[] pilha = new int[20]; //estrutura da pilha
     int topopilha = -1; //indicar o topo da pilha
     
@@ -69,4 +70,5 @@ public class exemploPilha {
         }
     }
      
+}
 }
