@@ -3,7 +3,7 @@ package Aula7;
 public class principal {
   public static void main(String[] args) {
 
-    Stack letras = new Stack();
+    stack letras = new stack();
     
     String phrase = "ESARF ATERCES ODALERAHCAB ME AICNEIC AD OAÇATUPMOC FI ONAIOG SUPMAC SOHNIRROM HE MU SOD SEROHLEM SOSRUC ED OAÇATUPMOC OD ODATSE ED SAIOG";
 

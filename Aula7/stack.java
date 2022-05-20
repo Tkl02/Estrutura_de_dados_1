@@ -1,10 +1,10 @@
 package Aula7;
 
 public class stack {
-  private Celula top;
+  private frase top;
 
   public void push(char letra){
-    Celula novaCelula = new Celula();
+    frase novaCelula = new frase();
     novaCelula.setDado(letra);
     novaCelula.setAnterior(this.top);
     this.top = novaCelula;
@@ -25,7 +25,7 @@ public class stack {
     }
   }
   
-  public Celula top(){
+  public frase top(){
     if (isEmpyt()) {
       System.out.println("Pilha vazia!!");
       return null;
@@ -35,7 +35,7 @@ public class stack {
     }
   }
   public void imprimir(){
-    Celula p;
+    frase p;
     p = this.top;
     if (isEmpyt()) {
       System.out.println("Pilha vazia!!!");
