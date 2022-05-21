@@ -5,7 +5,7 @@ public class Hanoi{
     public static void main(String[] args) {
       long tempoInicial = System.currentTimeMillis();
       int discos = 5; //1,10,20,30,40,41
-      int p;
+      long p;
       hanoi(discos,'A', 'B', 'C');
       long tempoFinal = System.currentTimeMillis();
       long tempoTotal = tempoFinal - tempoInicial;
