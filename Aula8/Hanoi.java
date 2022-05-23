@@ -4,7 +4,7 @@ import java.lang.Math;
 public class Hanoi{
     public static void main(String[] args) {
       long tempoInicial = System.currentTimeMillis();
-      int discos = 5; //1,10,20,30,40,41
+      int discos = 4; //1,10,20,30,40,41
       long p;
       hanoi(discos,'A', 'B', 'C');
       long tempoFinal = System.currentTimeMillis();
@@ -15,7 +15,7 @@ public class Hanoi{
       int hr          = (int) tempoTotal / 3600000;         
       System.out.println( String.format( "%02d:%02d:%02d:%03d", hr, min, seg, miliSeg));
 
-      p = (int) (Math.pow(2, discos) - 1);
+      p = (long) (Math.pow(2, discos) - 1);
 
       System.out.println("movimentos: " + p);
     }
