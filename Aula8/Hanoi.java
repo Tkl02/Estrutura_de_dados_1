@@ -4,7 +4,7 @@ import java.lang.Math;
 public class Hanoi{
     public static void main(String[] args) {
       long tempoInicial = System.currentTimeMillis();
-      int discos = 4; //1,10,20,30,40,41
+      int discos = 7; //1,10,20,30,40,41
       long p;
       hanoi(discos,'A', 'B', 'C');
       long tempoFinal = System.currentTimeMillis();
