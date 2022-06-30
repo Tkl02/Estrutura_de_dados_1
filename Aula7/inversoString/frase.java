@@ -1,4 +1,3 @@
-package Aula7;
 
 public class frase {
   private char letra;

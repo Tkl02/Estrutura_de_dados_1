@@ -1,4 +1,3 @@
-package Aula7;
 
 public class stack {
   private frase top;
