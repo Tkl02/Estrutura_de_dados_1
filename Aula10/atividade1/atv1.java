@@ -1,9 +1,9 @@
-package atividade1;
+package Aula10.atividade1;
 
 import java.util.Stack;
 import java.util.Scanner;
 
-public class atv {
+public class atv1 {
     public static void main(String[] args) {
         
         Stack<Character> pilha = new Stack<Character>();

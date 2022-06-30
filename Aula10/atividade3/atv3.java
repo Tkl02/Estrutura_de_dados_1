@@ -1,4 +1,4 @@
-package atividade3;
+package Aula10.atividade3;
 
 import java.util.Scanner;
 

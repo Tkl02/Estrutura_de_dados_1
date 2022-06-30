@@ -1,4 +1,4 @@
-package atividade6;
+package Aula10.atividade6;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package atividade7;
+package Aula10.atividade7;
 
 import java.util.Random;
 

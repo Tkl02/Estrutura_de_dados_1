@@ -1,3 +1,4 @@
+package Aula7.inversoString;
 
 public class stack {
   private frase top;

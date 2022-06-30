@@ -1,4 +1,4 @@
-package atividade8;
+package Aula10.atividade8;
 
 import java.util.Stack;
 

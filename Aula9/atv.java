@@ -2,8 +2,9 @@ package Aula9;
 
 import java.util.Scanner;
 
-public class main {
-    public static void main(String[] args) {
+public class atv {
+
+    public static void main(final String[] args) {
         
         Scanner sc = new Scanner(System.in);
         fila sujos = new fila();

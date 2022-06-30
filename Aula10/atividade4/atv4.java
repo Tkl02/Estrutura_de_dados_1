@@ -1,4 +1,4 @@
-package atividade4;
+package Aula10.atividade4;
 
 import java.util.Random;
 import java.util.Stack;
