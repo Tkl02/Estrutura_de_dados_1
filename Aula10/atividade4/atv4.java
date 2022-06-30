@@ -3,7 +3,7 @@ package atividade4;
 import java.util.Random;
 import java.util.Stack;
 
-public class main {
+public class atv4 {
     public static void main(String[] args) {
         fila F1 = new fila();
         Stack<Integer> pilha = new Stack<>();
