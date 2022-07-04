@@ -1,4 +1,4 @@
-package Aula7.calcPolonesa;
+package Aula07.calcPolonesa;
 
 
 import java.io.BufferedReader; 

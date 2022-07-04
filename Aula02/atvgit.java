@@ -1,4 +1,4 @@
-package Aula2;
+package Aula02;
 
 import java.text.DecimalFormat;                        //← bibliotecas para auxiliar
 import java.util.Scanner;                              //← na construçao de um codigo

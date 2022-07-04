@@ -19,7 +19,7 @@ Hotel-Fazenda Sucesso
 6. Calcula despesa do quarto
 7. Sai*/
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 public class atv400 {

@@ -5,7 +5,7 @@ usuário escolha código de uma mesa (100 a 129) e forneça a quantidade de luga
 algoritmo deve terminar quando o usuário digitar o código O (zero) para uma
 mesa ou quando todos os 150 lugares estiverem ocupados. */
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 

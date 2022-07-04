@@ -2,7 +2,7 @@
 data de nascimento (ddmm). O fim é determinado quando se digita 9999 para
 data; considere que a data foi digitada corretamente. */
 
-package Aula3;
+package Aula03;
 
 
 import java.util.Scanner;

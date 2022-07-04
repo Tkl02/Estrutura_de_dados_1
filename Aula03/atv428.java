@@ -6,7 +6,7 @@ semestre, ccc código do curso e nnn matrícula no curso)
 Um grupo empresarial resolveu premiar a aluna com CR mais alto de um curso
 cujo código deverá ser digitado. Suponha 10 alunos e que o CR é um n2inteiro.*/
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 public class atv428 {

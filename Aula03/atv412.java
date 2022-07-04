@@ -2,7 +2,7 @@
 imprima:. toda a matriz e uma outra matriz formada pelos números que se encontram
  em posições cuja linha mais coluna formam um numero par */
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 public class atv412 {

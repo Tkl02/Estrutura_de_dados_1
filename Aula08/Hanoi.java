@@ -1,4 +1,4 @@
-package Aula8;
+package Aula08;
 import java.lang.Math;
 
 public class Hanoi{

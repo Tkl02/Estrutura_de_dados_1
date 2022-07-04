@@ -2,7 +2,7 @@
  a média arredondada. Armazenar também a situação do aluno: AP ou RP. Imprimir
 uma listagem contendo nome notas media e situação de cada aluno tabulando*/
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 

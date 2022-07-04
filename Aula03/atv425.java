@@ -4,7 +4,7 @@ pois todo dia, pela manhã, o dono faz novas aquisições. Criar um algoritmo qu
 deixe cadastrar50 tipos de plantas e nunca deixar o estoque ficarabaixo do ideal.
 package Aula3;*/
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 public class atv425 {

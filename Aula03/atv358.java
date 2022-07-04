@@ -5,7 +5,7 @@ m lucro < 10 %
 m lucro > 20 % */
 
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 public class atv358 {

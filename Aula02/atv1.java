@@ -1,4 +1,4 @@
-package Aula2;
+package Aula02;
 
 public class atv1{
     public static void main(String[] args) {

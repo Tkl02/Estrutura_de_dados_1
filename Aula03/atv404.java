@@ -2,7 +2,7 @@
 10 x 10 e escreva somente os elementos acima da diagonal principal*/
 
 
-package Aula3;
+package Aula03;
 
 import java.util.Scanner;
 public class atv404 {

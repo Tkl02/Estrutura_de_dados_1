@@ -1,4 +1,4 @@
-package Aula4;
+package Aula04;
 
 import javax.swing.JOptionPane;
 
