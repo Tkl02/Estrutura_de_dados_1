@@ -103,11 +103,6 @@ public class Fila {
         Celula local  = inicio;
         while (local != null) {
             str += "\nID: "+ local.id+
-            //        " Sexo: "+ local.sexo+
-            //        " Idade: "+ local.idade+
-            //        " Gestante: "+ local.gestante+
-            //        " Lactante: "+ local.lactante+
-                //    " Necessidades Especiais: "+ local.necessidadeEspecial+
                    "\nNivel de prioridade: "+ local.prioridade;
             local = local.proximo; 
         }
