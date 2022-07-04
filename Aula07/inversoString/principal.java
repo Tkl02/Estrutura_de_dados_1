@@ -1,4 +1,4 @@
-package Aula7.inversoString;
+package Aula07.inversoString;
 
 public class principal {
   public static void main(String[] args) {
