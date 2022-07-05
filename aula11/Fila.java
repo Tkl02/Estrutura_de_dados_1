@@ -1,4 +1,4 @@
-package aula11;
+package Aula11;
 
 import java.util.ArrayList;
 import java.util.Random;
