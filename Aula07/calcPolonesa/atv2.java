@@ -1,103 +1,137 @@
-package Aula07.calcPolonesa;
+package Aula7.calcpolonesa;
+
+import br.edu.fasul.lac.estruturas.Fila;
+import br.edu.fasul.lac.estruturas.Pilha;
+
+public class ExpressaoLogica {
+
+    String expressao;
+    String[] segmentos;
+    Fila fila;
+    Pilha pilha;
 
 
-import java.io.BufferedReader; 
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-class Nv {
-    public int item;
-    public Nv anterior;
-}
-
-class Pilhass {
-    private Nv topo;
-    public Pilhass() { 
-        topo = null;
+    public ExpressaoLogica() {
     }
 
-    public boolean empty() {  
-        return (topo == null);
+    public ExpressaoLogica(String expressao) {
+        this.expressao = expressao;
     }
 
-    public int top() {    
-        return topo.item;
+    public void executa() {
+        segmentos = quebra();
+        separa();
+        resolve();
     }
 
-    public void pop() {     
-        if (!empty()) {    
-            topo = topo.anterior;
+    public String[] quebra() {
+        expressao = expressao.replaceAll(" ", "").replaceAll("", " ");
+        expressao = expressao.replaceAll("< - >", "<->").replaceAll("- >", "->").trim().toUpperCase();
+        return expressao.split(" ");
+    }
+
+    public static boolean isValida(String expressao) {
+        int c_parenteses = 0;
+        expressao = expressao.replaceAll(" ", "").toUpperCase();
+
+        while (true) {
+            
+            for (int i = 0; i < expressao.length(); i++) {
+                if (expressao.charAt(i) == '(') {
+                    c_parenteses++;
+                }
+                if (expressao.charAt(i) == ')') {
+                    c_parenteses--;
+                }
+            }
+            
+            if (c_parenteses == 0) {
+                if (expressao.matches("^(~*[(]*?|([FT]|[(]*[~]*?[FT])[)]*?(V|\\^|->|<->)[(]?~?[(]?)*(F|T|[FT][)]*)$")) {
+                    return true;
+                }
+                return false;
+            }
+            return false;
         }
     }
 
-    public void push(int valor) { 
-        Nv novo = new Nv(); 
-        novo.item = valor;
-        novo.anterior = topo;
-        topo = novo;
+    public boolean isMaisImportante(String valor, String topo_pilha) {
+        String precedencia = "~^V-<"; 
+        if (topo_pilha.equals("(")) {
+            return false;
+        } else if (precedencia.indexOf(topo_pilha) >= precedencia.indexOf(valor)) {
+            return false;
+        }
+        return true;
     }
-}
 
-class Pilhas {
-
-    public static void main(String[] args) throws IOException {
-        Pilhass p = new Pilhass();
-        int nro1, nro2;
-        char c; 
-        System.out.println("---------------------------");
-        System.out.println("Calculadora notação pos-fixa");
-        System.out.println("   Exemplo de uso:\n   5 9 + 2 * 6 5 * + "); 
-        System.out.println("---------------------------");
-        System.out.print("Informe sua expressao:\n   ");
-        
-        String s = lerStr();
-
-        for (int i = 0; i < s.length(); i++) {  
-            c = s.charAt(i);   
-            
-           
-            if (Character.isDigit(c)) {   
-                p.push(Character.digit(c, 10));
-            } else if (c == '+') {   
-                nro1 = p.top();
-                p.pop();
-                nro2 = p.top();
-                p.pop();
-                p.push(nro1 + nro2);
-            } else if (c == '*') {  
-                nro1 = p.top();
-                p.pop();
-                nro2 = p.top();
-                p.pop();
-                p.push(nro1 * nro2);
-            } else if (c == '-') {    
-                nro1 = p.top();
-                p.pop();
-                nro2 = p.top();
-                p.pop();
-                p.push(nro1 - nro2);
-            } else if (c == '/') {   
-                nro1 = p.top();
-                p.pop();
-                nro2 = p.top();
-                p.pop();
-                p.push(nro1 / nro2);
-            } else if (c == '^') {   
-                nro1 = p.top();
-                p.pop();
-                nro2 = p.top();
-                p.pop();
-                p.push((int) Math.pow(nro1, nro2));  
+    public void separa() {
+        fila = new Fila();
+        pilha = new Pilha();
+        for (String token : segmentos) {
+            if (token.matches("[FT]")) { 
+                fila.insere(token);
+            } else if (token.equals("~") || token.equals("(")) {
+                pilha.insere(token);
+            } else if (token.equals(")")) {
+                while (!(pilha.verificarFinal().equals("("))) { 
+                    fila.insere(pilha.retira());
+                }
+                pilha.retira(); 
+            } else { 
+                if (!pilha.isVazia()) {
+                    if (isMaisImportante(token, (String) pilha.verificarFinal()))
+                    {
+                        fila.insere(pilha.retira());
+                    }
+                }
+                pilha.insere(token);
             }
         }
-        System.out.println("Resposta = " + p.top());
-        p.pop();
+        
+        while (!pilha.isVazia()) {
+            fila.insere(pilha.retira());
+        }
     }
 
-    public static String lerStr() throws IOException { 
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        String s = br.readLine();
-        return s;
+    public void resolve() {
+        String i, j;
+        while (!fila.isVazia()) {
+            String x = (String) fila.retira();
+            if (x.equals("F") || x.equals("T")) {
+                pilha.insere(x);
+            } else {
+                switch (x.charAt(0)) {
+                    case '^': 
+                        i = (String) pilha.retira();
+                        j = (String) pilha.retira();
+                        pilha.insere(OperacoesLogicas.and(j, i));
+                        break;
+                    case 'V': 
+                        i = (String) pilha.retira();
+                        j = (String) pilha.retira();
+                        pilha.insere(OperacoesLogicas.or(j, i));
+                        break;
+                    case '~': 
+                        i = (String) pilha.retira();
+                        pilha.insere(OperacoesLogicas.not(i));
+                        break;
+                    case '-': 
+                        i = (String) pilha.retira();
+                        j = (String) pilha.retira();
+                        pilha.insere(OperacoesLogicas.implicacao(j, i));
+                        break;
+                    case '<': 
+                        i = (String) pilha.retira();
+                        j = (String) pilha.retira();
+                        pilha.insere(OperacoesLogicas.bicondicional(i, j));
+                        break;
+                }
+            }
+        }
+    }
+
+    public String resposta() {
+        return pilha.toString();
     }
 }
